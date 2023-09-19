@@ -1,11 +1,27 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Video from "~/components/ Video";
 
 export default function About() {
+  const [isLoading, setIsLoading] = useState(true);
   const section = ["/", "/about", "/#contact-section"];
   const router = useRouter();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); // Adjust the time as needed
 
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex h-screen items-center justify-center">
+        <div className="h-16 w-16 animate-spin rounded-full border-t-4 border-solid border-blue-500"></div>
+      </div>
+    );
+  }
   return (
     <>
       <Head>
