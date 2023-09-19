@@ -5,15 +5,23 @@ import Video from "~/components/ Video";
 
 export default function About() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const section = ["/", "/about", "/#contact-section"];
   const router = useRouter();
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500); // Adjust the time as needed
+      if (!isVideoLoaded) {
+        setIsLoading(false);
+      }
+    }, 1000); // Adjust the time as needed
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [isVideoLoaded]);
+
+  const handleVideoLoad = () => {
+    setIsVideoLoaded(true);
+    setIsLoading(false);
+  };
 
   if (isLoading) {
     return (
@@ -45,7 +53,7 @@ export default function About() {
         ))}
       </div>
       <div className="relative h-[60vh] w-screen overflow-hidden">
-        <Video />
+        <Video onLoad={handleVideoLoad} />
         <div className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-black bg-opacity-60 px-40">
           <div className="flex flex-col text-white">
             <div className="flex flex-col gap-6 text-4xl font-bold">

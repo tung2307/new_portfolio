@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-
-function VideoComponent() {
+interface VideoComponentProps {
+  onLoad: () => void;
+}
+function VideoComponent({ onLoad }: VideoComponentProps) {
   const [currentSource, setCurrentSource] = useState(0);
   const videoSources = [
     "/pexels-kehn-hermano-6657004 (1080p).mp4",
@@ -32,6 +34,7 @@ function VideoComponent() {
         onEnded={handleVideoEnd}
         autoPlay
         muted
+        onLoadedData={onLoad}
       >
         Your browser does not support the video tag.
       </video>
