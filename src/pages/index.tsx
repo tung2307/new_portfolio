@@ -3,13 +3,13 @@ import Head from "next/head";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import ReorderIcon from "@mui/icons-material/Reorder";
-import { useRouter } from "next/router";
 import NavBar from "~/components/NavBar";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import SendIcon from "@mui/icons-material/Send";
 import About from "~/components/About";
+import Contact from "~/components/Contact";
 export default function Home() {
   const [lightMode, setLightMode] = useState(true);
   const [bounce, setBounce] = useState(false);
@@ -30,14 +30,14 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const aboutSection = document.getElementById("about-section");
+      const projectSection = document.getElementById("project-section");
       const homeSection = document.getElementById("home-section");
 
-      if (aboutSection && homeSection) {
-        const aboutSectionTop = aboutSection.offsetTop - 10;
+      if (projectSection && homeSection) {
+        const projectSectionTop = projectSection.offsetTop - 10;
         const homeSectionHalf = homeSection.offsetHeight / 2;
 
-        if (window.scrollY > aboutSectionTop) {
+        if (window.scrollY > projectSectionTop) {
           setNavVisible(true);
         } else if (window.scrollY < homeSectionHalf) {
           setNavVisible(false);
@@ -181,6 +181,18 @@ export default function Home() {
                   <p className="text-xl md:text-3xl">
                     A Web Developer. Currently based in San Mateo, California
                   </p>
+                  <div className="pt-10">
+                    <div className="relative h-10 w-20 cursor-pointer after:absolute after:inset-x-0 after:bottom-0 after:h-1 after:bg-black after:transition-all after:duration-500 after:ease-in-out hover:after:h-[15px] md:h-12 md:w-24">
+                      <div
+                        className="h-8 text-center text-xl md:text-2xl"
+                        onClick={() => {
+                          window.open("/Resume.pdf", "_blank");
+                        }}
+                      >
+                        Resume
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="hidden w-40 flex-col items-end gap-20  md:flex">
@@ -229,8 +241,11 @@ export default function Home() {
         >
           <About />
         </div>
-        <div id="contact-section" className="section min-h-screen">
-          ...Contact section content...
+        <div
+          id="contact-section"
+          className="section flex min-h-[60vh]  md:min-h-[50vh]"
+        >
+          <Contact />
         </div>
       </div>
     </>

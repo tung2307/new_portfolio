@@ -4,7 +4,7 @@ import React from "react";
 export default function About() {
   const router = useRouter();
   return (
-    <div className="flex min-h-screen pb-20 pt-28 md:pt-32">
+    <div className="flex min-h-screen items-center">
       <section className="flex flex-col gap-5 px-10 md:px-40 ">
         <h1 className="w-36 rounded-lg border-2 p-1 text-center text-2xl shadow">
           ABOUT ME
