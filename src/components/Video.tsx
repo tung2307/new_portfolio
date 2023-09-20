@@ -1,8 +1,6 @@
 import { useEffect } from "react";
-interface VideoProps {
-  onLoad: () => void;
-}
-function VideoComponent({ onLoad }: VideoProps) {
+
+function VideoComponent() {
   const videoSources = [
     "https://utfs.io/f/7295e7c0-6afa-49e1-a9c3-b85f6874cc68-y0l7zw.mp4",
 
@@ -12,7 +10,7 @@ function VideoComponent({ onLoad }: VideoProps) {
   useEffect(() => {
     const video = document.getElementById("myVideo") as HTMLVideoElement;
     if (video) {
-      video.playbackRate = 3.0;
+      video.playbackRate = 2.0;
     }
   }, []);
 
@@ -25,7 +23,6 @@ function VideoComponent({ onLoad }: VideoProps) {
         loop
         autoPlay
         muted
-        onLoadedData={onLoad}
       >
         Your browser does not support the video tag.
       </video>

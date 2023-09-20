@@ -8,7 +8,6 @@ import { OurFileRouter, ourFileRouter } from "~/server/uploadthing";
 
 export default function About() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const section = ["/", "/about", "/#contact-section"];
   const [isIntroDone, setIsIntroDone] = useState(false);
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -22,7 +21,7 @@ export default function About() {
         setIsFadingOut(true);
         const fadeOutTimer = setTimeout(() => {
           setIsIntroDone(true);
-        }, 1000); // Duration of the fade-out animation
+        }, 1000); // This duration should match your fade-out animation duration
 
         return () => clearTimeout(fadeOutTimer);
       }, 1000); // Adjust the time to match your animation duration
@@ -31,12 +30,7 @@ export default function About() {
     }, 1500);
 
     return () => clearTimeout(timer);
-  }, [isVideoLoaded]);
-
-  const handleVideoLoad = () => {
-    setIsVideoLoaded(true);
-    setIsLoading(false);
-  };
+  }, []);
 
   const handleNavigation = (url: string, item: string) => {
     if (url) {
@@ -108,7 +102,7 @@ export default function About() {
         }}
       /> */}
       <div className="relative h-[60vh] w-screen overflow-hidden">
-        <Video onLoad={handleVideoLoad} />
+        <Video />
         <div className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-black bg-opacity-60 px-40">
           <div className="flex flex-col text-white">
             <div className="flex flex-col gap-6 text-4xl font-bold">
