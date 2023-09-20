@@ -11,6 +11,7 @@ export default function About() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const section = ["/", "/about", "/#contact-section"];
   const [isIntroDone, setIsIntroDone] = useState(false);
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   const router = useRouter();
 
@@ -20,11 +21,16 @@ export default function About() {
         setIsLoading(false);
       }
       const introTimer = setTimeout(() => {
-        setIsIntroDone(true);
+        setIsFadingOut(true);
+        const fadeOutTimer = setTimeout(() => {
+          setIsIntroDone(true);
+        }, 1000); // Duration of the fade-out animation
+
+        return () => clearTimeout(fadeOutTimer);
       }, 1000); // Adjust the time to match your animation duration
 
       return () => clearTimeout(introTimer);
-    }, 1500);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [isVideoLoaded]);
@@ -52,7 +58,13 @@ export default function About() {
         <title>About Me - Tung Nguyen</title>
       </Head>
       {(isLoading || !isIntroDone) && (
-        <div className="intro-animation fixed bottom-0 left-0 right-0 top-0 z-50 flex h-screen items-center justify-center bg-gray-500 text-white">
+        <div
+          className={`intro-animation fixed bottom-0 left-0 right-0 top-0 z-50 flex h-screen items-center justify-center bg-gray-500 text-white ${
+            isFadingOut
+              ? "opacity-0 transition-opacity duration-1000"
+              : "opacity-100"
+          }`}
+        >
           <div className="absolute left-0 flex h-full w-1/2 items-center justify-end">
             <span
               className={`pr-2 text-4xl duration-1000 ${
@@ -73,6 +85,7 @@ export default function About() {
           </div>
         </div>
       )}
+
       <div className="flex h-12 flex-row justify-end gap-20 border-b px-40 text-xl ">
         {["home", "about", "contact"].map((item, index) => (
           <div
