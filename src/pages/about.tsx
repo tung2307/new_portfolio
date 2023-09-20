@@ -33,6 +33,17 @@ export default function About() {
       </div>
     );
   }
+  const handleNavigation = (url: string, item: string) => {
+    if (url) {
+      if (item === "home") {
+        void router.push(url, undefined, { scroll: true }).then(() => {
+          location.reload();
+        });
+      } else {
+        void router.push(url, undefined, { scroll: true });
+      }
+    }
+  };
 
   return (
     <>
@@ -45,12 +56,7 @@ export default function About() {
           <div
             key={item}
             className="flex cursor-pointer items-center justify-center"
-            onClick={() => {
-              const url = section[index];
-              if (url) {
-                void router.push(url, undefined, { scroll: true });
-              }
-            }}
+            onClick={() => handleNavigation(section[index] ?? "", item)}
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </div>
