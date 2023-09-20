@@ -1,7 +1,10 @@
+import { UploadButton, UploadDropzone } from "@uploadthing/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Video from "~/components/ Video";
+import "@uploadthing/react/styles.css";
+import { OurFileRouter, ourFileRouter } from "~/server/uploadthing";
 
 export default function About() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +33,7 @@ export default function About() {
       </div>
     );
   }
+
   return (
     <>
       <Head>
@@ -52,6 +56,18 @@ export default function About() {
           </div>
         ))}
       </div>
+      {/* <UploadDropzone<OurFileRouter>
+        endpoint="videoUploader"
+        onClientUploadComplete={(res) => {
+          // Do something with the response
+          console.log("Files: ", res);
+          alert("Upload Completed");
+        }}
+        onUploadError={(error: Error) => {
+          // Do something with the error.
+          alert(`ERROR! ${error.message}`);
+        }}
+      /> */}
       <div className="relative h-[60vh] w-screen overflow-hidden">
         <Video onLoad={handleVideoLoad} />
         <div className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-black bg-opacity-60 px-40">
