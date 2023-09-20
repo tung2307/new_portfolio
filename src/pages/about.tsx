@@ -17,9 +17,6 @@ export default function About() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (!isVideoLoaded) {
-        setIsLoading(false);
-      }
       setIsLoading(false);
       const introTimer = setTimeout(() => {
         setIsFadingOut(true);
