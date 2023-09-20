@@ -10,13 +10,21 @@ export default function About() {
   const [isLoading, setIsLoading] = useState(true);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const section = ["/", "/about", "/#contact-section"];
+  const [isIntroDone, setIsIntroDone] = useState(false);
+
   const router = useRouter();
+
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!isVideoLoaded) {
         setIsLoading(false);
       }
-    }, 1000); // Increase the time to 5000ms or more
+      const introTimer = setTimeout(() => {
+        setIsIntroDone(true);
+      }, 1000); // Adjust the time to match your animation duration
+
+      return () => clearTimeout(introTimer);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [isVideoLoaded]);
@@ -26,13 +34,6 @@ export default function About() {
     setIsLoading(false);
   };
 
-  if (isLoading) {
-    return (
-      <div className="flex h-screen items-center justify-center">
-        <div className="h-16 w-16 animate-spin rounded-full border-t-4 border-solid border-blue-500"></div>
-      </div>
-    );
-  }
   const handleNavigation = (url: string, item: string) => {
     if (url) {
       if (item === "home") {
@@ -50,7 +51,28 @@ export default function About() {
       <Head>
         <title>About Me - Tung Nguyen</title>
       </Head>
-
+      {(isLoading || !isIntroDone) && (
+        <div className="intro-animation fixed bottom-0 left-0 right-0 top-0 z-50 flex h-screen items-center justify-center bg-gray-500 text-white">
+          <div className="absolute left-0 flex h-full w-1/2 items-center justify-end">
+            <span
+              className={`pr-2 text-4xl duration-1000 ${
+                isLoading ? "animate-slideInFromLeft" : "animate-slideOutUp"
+              }`}
+            >
+              Tung
+            </span>
+          </div>
+          <div className="absolute right-0 flex h-full w-1/2 items-center justify-start">
+            <span
+              className={`pl-2 text-4xl duration-1000 ${
+                isLoading ? "animate-slideInFromRight" : "animate-slideOutDown"
+              }`}
+            >
+              Nguyen
+            </span>
+          </div>
+        </div>
+      )}
       <div className="flex h-12 flex-row justify-end gap-20 border-b px-40 text-xl ">
         {["home", "about", "contact"].map((item, index) => (
           <div
