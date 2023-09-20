@@ -30,7 +30,7 @@ export default function About() {
       }, 1000); // Adjust the time to match your animation duration
 
       return () => clearTimeout(introTimer);
-    }, 1000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [isVideoLoaded]);
