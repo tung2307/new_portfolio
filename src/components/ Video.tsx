@@ -9,7 +9,7 @@ function VideoComponent({ onLoad }: VideoComponentProps) {
     "/pexels-kindel-media-9701886 (1080p).mp4",
     "/production_id 4566143 (1080p).mp4",
     "/pexels-kindel-media-9699686 (1080p).mp4",
-    "/pexels-kindel-media-8995969 (2160p).mp4",
+    "/pexels-kindel-media-9700087 (1080p).mp4",
 
     // ...add more sources as needed
   ];
