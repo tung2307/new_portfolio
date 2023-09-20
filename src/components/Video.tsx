@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-interface VideoComponentProps {
+interface VideoProps {
   onLoad: () => void;
 }
-function VideoComponent({ onLoad }: VideoComponentProps) {
+function VideoComponent({ onLoad }: VideoProps) {
   const videoSources = [
     "https://utfs.io/f/7295e7c0-6afa-49e1-a9c3-b85f6874cc68-y0l7zw.mp4",
 

@@ -2,7 +2,7 @@ import { UploadButton, UploadDropzone } from "@uploadthing/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Video from "~/components/ Video";
+import Video from "~/components/Video";
 import "@uploadthing/react/styles.css";
 import { OurFileRouter, ourFileRouter } from "~/server/uploadthing";
 
@@ -16,7 +16,7 @@ export default function About() {
       if (!isVideoLoaded) {
         setIsLoading(false);
       }
-    }, 1000); // Adjust the time as needed
+    }, 1000); // Increase the time to 5000ms or more
 
     return () => clearTimeout(timer);
   }, [isVideoLoaded]);
