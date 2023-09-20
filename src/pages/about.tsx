@@ -20,6 +20,7 @@ export default function About() {
       if (!isVideoLoaded) {
         setIsLoading(false);
       }
+      setIsLoading(false);
       const introTimer = setTimeout(() => {
         setIsFadingOut(true);
         const fadeOutTimer = setTimeout(() => {
