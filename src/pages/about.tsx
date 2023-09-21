@@ -1,8 +1,11 @@
 import { UploadButton, UploadDropzone } from "@uploadthing/react";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Video from "~/components/Video";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import { OurFileRouter, ourFileRouter } from "~/server/uploadthing";
 
@@ -13,7 +16,37 @@ export default function About() {
   const [isFadingOut, setIsFadingOut] = useState(false);
 
   const router = useRouter();
+  const general = [
+    "Programming",
+    "Problem Solving",
+    "Software Development",
+    "Googling",
+    "Databases",
+    "Figma",
+    "Lightroom",
+    "Version Control",
+    "Research & Continuous Learning",
+    "Soft Skills",
+    "Web Development",
+    "Computer Architecture",
+  ];
 
+  const engineer = [
+    "HTML/CSS",
+    "React",
+    "NextJS",
+    "TypeScript",
+    "NodeJs",
+    "ExpressJs",
+    "REST API",
+    "MySQL",
+    "Prisma",
+    "TRPC",
+    "AWS",
+    "Heroku",
+    "Vercel",
+    "PlanetScale",
+  ];
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -128,12 +161,12 @@ export default function About() {
       </div>
 
       <div className="flex w-full flex-col md:flex-row">
-        <div className="flex w-full justify-center pl-0 pt-24 md:pl-20 ">
+        <div className="flex w-full justify-center pl-0 pt-16 md:pl-20 md:pt-24 ">
           <div className=" h-64 w-64 rounded-xl border lg:h-96 lg:w-96">
             placeholder
           </div>
         </div>
-        <div className="w-full px-10 pt-16 md:px-20">
+        <div className="w-full px-10 pt-8 md:px-20 md:pt-16">
           <div
             className="proxima-nova flex flex-col gap-10 text-lg text-gray-700 md:text-xl"
             style={{
@@ -153,8 +186,8 @@ export default function About() {
               Beginning at the City College of San Francisco, my self-initiated
               projects have been a testament to my growing technical skills and
               problem-solving capabilities. As I actively seek a software
-              engineering internship, I am excited to bring my diverse skill set
-              to a forward-thinking team.
+              engineering job, I am excited to bring my diverse skill set to a
+              forward-thinking team.
             </div>
             <div>
               Specializing in web development and backend technologies, I&apos;m
@@ -225,8 +258,39 @@ export default function About() {
             </div>
           </div>
         </div>
-
-        <div className="w-[50vw] text-2xl font-bold md:text-4xl">Skills</div>
+        <div className="flex flex-col gap-4">
+          <div className="text-2xl font-bold md:text-4xl">Skills</div>
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-3">
+              <div className="text-lg font-semibold md:text-xl">General</div>
+              <div className="w-62 flex flex-row flex-wrap gap-2 sm:w-80 md:w-96">
+                {general.map((skill) => (
+                  <div
+                    key={skill}
+                    className="rounded-xl border bg-gray-600 px-2 py-1 text-sm text-white"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-col gap-3">
+              <div className="text-lg font-semibold md:text-xl">
+                Engineering
+              </div>
+              <div className="w-62 flex flex-row flex-wrap gap-2 sm:w-80 md:w-96">
+                {engineer.map((skill) => (
+                  <div
+                    key={skill}
+                    className="rounded-xl border bg-gray-600 px-2 py-1 text-sm text-white"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="px-10 pt-10 md:px-20">
         <div className="relative h-10 w-20 cursor-pointer after:absolute after:inset-x-0 after:bottom-0 after:h-1 after:bg-black after:transition-all after:duration-500 after:ease-in-out hover:after:h-[15px] md:h-12 md:w-24">
@@ -238,6 +302,56 @@ export default function About() {
           >
             Resume
           </div>
+        </div>
+      </div>
+      <div className="flex w-screen items-center justify-center py-20 md:py-40">
+        <div className="flex w-full flex-col gap-5">
+          <div className="text-center text-4xl font-bold md:text-6xl">
+            STAY IN TOUCH
+          </div>
+          <div className="text-center">
+            <Link
+              href="mailto:tung.nguyen23797@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg font-bold transition hover:text-gray-500 sm:text-2xl md:text-4xl"
+            >
+              tung.nguyen23797@gmail.com
+            </Link>
+          </div>
+          <div className="flex w-full justify-center">
+            <div className="flex flex-row gap-10">
+              <Link
+                href="https://www.linkedin.com/in/tung-nguyen-413171146/"
+                target="_blank"
+                className="cursor-pointer"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon fontSize="large" />
+              </Link>
+              <Link
+                href="https://github.com/tung2307"
+                className="cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon fontSize="large" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="px-5 py-5 md:px-20 md:py-10">
+        <div>Copyright © Tung Nguyen.</div>
+        <div>
+          Video courtesy of{" "}
+          <Link
+            href="https://www.pexels.com/videos/"
+            className="text-blue-600 underline"
+          >
+            Pexels
+          </Link>
         </div>
       </div>
     </>

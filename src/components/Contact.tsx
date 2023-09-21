@@ -39,7 +39,10 @@ export default function Contact() {
               <GitHubIcon fontSize="large" />
             </Link>
           </div>
-          <div>Copyright © Tung Nguyen. </div>
+          <div>
+            <div>Copyright © Tung Nguyen. </div>
+            <div>Icons courtesy of Material UI</div>
+          </div>
         </div>
       </div>
     </>
