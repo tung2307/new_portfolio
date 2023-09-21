@@ -189,12 +189,41 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex  flex-col px-10 pt-10 md:flex-row md:px-20 md:pt-20">
-        <div className="flex flex-col">
+      <div className="flex flex-col gap-10 px-10 pt-10 md:flex-row md:gap-0 md:px-20 md:pb-0 md:pt-20">
+        <div className=" proxima-nova flex flex-col gap-10">
           <div className="w-[50vw] text-2xl font-bold md:text-4xl">
             Experience
           </div>
-          <div></div>
+          <div>
+            <div className=" text-lg md:text-xl">Web Developer</div>
+            <div className="text-thin text-gray-600">
+              Freelance Designer, Developer | May 2023 - Present
+            </div>
+          </div>
+          <div>
+            <div className="text-lg  md:text-xl ">
+              CSC600 Programming Paradigms and Languages SFSU
+            </div>
+            <div className="text-thin text-gray-600">
+              Project Assistant, Developer | Feb 2023 - May 2023
+            </div>
+          </div>
+          <div>
+            <div className="text-lg  md:text-xl">
+              CSC648 Software Engineneering SFSU
+            </div>
+            <div className="text-thin text-gray-600">
+              Backend Developer | Sep 2022 - Dec 2022
+            </div>
+          </div>
+          <div>
+            <div className="text-lg  md:text-xl">
+              CSC642 Human-Computer Interaction SFSU
+            </div>
+            <div className="text-thin text-gray-600">
+              Developer | Sep 2022 - Dec 2023
+            </div>
+          </div>
         </div>
 
         <div className="w-[50vw] text-2xl font-bold md:text-4xl">Skills</div>
