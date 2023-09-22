@@ -10,6 +10,7 @@ import AssignmentIcon from "@mui/icons-material/Assignment";
 import SendIcon from "@mui/icons-material/Send";
 import About from "~/components/About";
 import Contact from "~/components/Contact";
+import Project from "~/components/Project";
 export default function Home() {
   const [lightMode, setLightMode] = useState(true);
   const [bounce, setBounce] = useState(false);
@@ -233,7 +234,7 @@ export default function Home() {
         </div>
 
         <div id="project-section" className="section min-h-screen">
-          ...Project section content...
+          <Project />
         </div>
         <div
           id="about-section"
