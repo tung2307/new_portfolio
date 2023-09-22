@@ -59,7 +59,7 @@ function ListProject({ name, description, link, stack }: ListProjectProps) {
           className={`transform transition-all duration-[1500ms] ${
             isExpanded
               ? "w-screen px-4 opacity-100 md:w-[50vw]"
-              : "w-[50vw] opacity-0"
+              : "w-full px-4 opacity-0 md:w-[50vw]"
           }`}
         >
           <div className="proxima-nova flex w-full flex-col px-2 pt-5 md:w-96 md:pt-0 lg:w-[30rem]">

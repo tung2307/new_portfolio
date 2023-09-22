@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Video from "~/components/Video";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
+import Image from "next/image";
 import { OurFileRouter, ourFileRouter } from "~/server/uploadthing";
 
 export default function About() {
@@ -122,16 +122,21 @@ export default function About() {
         </div>
       )}
 
-      <div className="flex h-12 flex-row justify-center gap-10 border-b px-5 text-lg sm:text-xl md:justify-end md:gap-20 md:px-40 ">
-        {["home", "about", "contact"].map((item, index) => (
-          <div
-            key={item}
-            className="flex cursor-pointer items-center justify-center"
-            onClick={() => handleNavigation(section[index] ?? "", item)}
-          >
-            {item.charAt(0).toUpperCase() + item.slice(1)}
-          </div>
-        ))}
+      <div className="flex h-12 flex-row justify-center  border-b  text-lg sm:text-xl md:justify-between  ">
+        <div className=" proxima-nova hidden items-center px-20  text-3xl font-bold md:flex">
+          Tung Nguyen
+        </div>
+        <div className="flex flex-row gap-10 px-5 md:gap-20 md:px-40">
+          {["home", "about", "contact"].map((item, index) => (
+            <div
+              key={item}
+              className="flex cursor-pointer items-center justify-center"
+              onClick={() => handleNavigation(section[index] ?? "", item)}
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </div>
+          ))}
+        </div>
       </div>
       {/* <UploadDropzone<OurFileRouter>
         endpoint="videoUploader"
@@ -162,8 +167,14 @@ export default function About() {
 
       <div className="flex w-full flex-col md:flex-row">
         <div className="flex w-full justify-center pl-0 pt-16 md:pl-20 md:pt-24 ">
-          <div className=" h-64 w-64 rounded-xl border lg:h-96 lg:w-96">
-            placeholder
+          <div className="relative h-80 w-80 lg:h-96 lg:w-96">
+            <Image
+              src="/Logo.png"
+              alt=""
+              layout="fill"
+              objectFit="cover" // You can change this to "contain" if you don’t want to crop the image.
+              objectPosition="center"
+            />
           </div>
         </div>
         <div className="w-full px-10 pt-8 md:px-20 md:pt-16">
