@@ -123,9 +123,12 @@ export default function About() {
       )}
 
       <div className="flex h-12 flex-row justify-center  border-b  text-lg sm:text-xl md:justify-between  ">
-        <div className=" proxima-nova hidden items-center px-20  text-3xl font-bold md:flex">
+        <Link
+          href={"/"}
+          className=" proxima-nova hidden items-center px-20  text-3xl font-bold md:flex"
+        >
           Tung Nguyen
-        </div>
+        </Link>
         <div className="flex flex-row gap-10 px-5 md:gap-20 md:px-40">
           {["home", "about", "contact"].map((item, index) => (
             <div
