@@ -188,31 +188,22 @@ export default function About() {
               fontWeight: "100",
             }}
           >
-            <div>
-              Leveraging a solid background in Computer Science from SFSU,
-              I&apos;m transitioning from academia to hands-on innovation as a
-              Web Developer. Delving deep into backend technologies and cloud
-              platforms, I am honing my expertise in crafting seamless user
-              experiences with modern tools like Next.js, Express, and Node.
-            </div>
+          <div>
+    With a Bachelor's degree in Computer Science from San Francisco State University, I have transitioned from academia to hands-on experience in web development. My deep dive into backend technologies and cloud platforms has allowed me to craft seamless user experiences using modern tools like Next.js, Express, and Node.js.
+</div>
 
-            <div>
-              Beginning at the City College of San Francisco, my self-initiated
-              projects have been a testament to my growing technical skills and
-              problem-solving capabilities. As I actively seek a software
-              engineering job, I am excited to bring my diverse skill set to a
-              forward-thinking team.
-            </div>
-            <div>
-              Specializing in web development and backend technologies, I&apos;m
-              ready to help create digital solutions that resonate globally.
-            </div>
-            <div>
-              Please don&apos;t hesitate to reach out to me. I&apos;m excited to
-              apply my passion and expertise towards developing transformative
-              products in a role that aligns with my dedication to positive
-              global change.
-            </div>
+<div>
+    Starting at City College of San Francisco, my self-initiated projects have been a testament to my growing technical skills and problem-solving capabilities. While actively seeking software engineering roles during my OPT, I further developed my expertise in web development and backend technologies.
+</div>
+
+<div>
+    Currently pursuing an Associate's degree in Business Administration at the College of San Mateo, I am expanding my knowledge in the business domain to complement my technical background. This unique combination of skills positions me to contribute effectively to forward-thinking teams, bridging the gap between technology and business.
+</div>
+
+<div>
+    I am eager to apply my diverse skill set in a role that aligns with my passion for creating transformative digital solutions. Please don't hesitate to reach out if you're looking for someone dedicated to driving positive global change through innovative technology.
+</div>
+
           </div>
         </div>
       </div>
@@ -235,6 +226,14 @@ export default function About() {
             Bachelor of Science in Computer Science - Graduated
           </div>
         </div>
+        <div className="flex flex-col">
+          <div className="proxima-nova text-lg font-bold md:text-xl">
+            San Mateo Community College | 2024-Current
+          </div>
+          <div className="proxima-nova text-base md:text-lg">
+            Associate in Business Administration
+          </div>
+        </div>
       </div>
       <div className="flex flex-col gap-10 px-10 pt-10 md:flex-row md:gap-0 md:px-20 md:pb-0 md:pt-20">
         <div className=" proxima-nova flex flex-col gap-10">
@@ -244,7 +243,7 @@ export default function About() {
           <div>
             <div className=" text-lg md:text-xl">Web Developer</div>
             <div className="text-thin text-gray-600">
-              Freelance Designer, Developer | May 2023 - Present
+              Freelance Designer, Developer | May 2023 - June 2024
             </div>
           </div>
           <div>
