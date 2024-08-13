@@ -160,7 +160,7 @@ export default function About() {
             <div className="flex flex-col gap-3 text-xl font-bold md:gap-6 md:text-4xl">
               <div>Greetings, I&apos;m Tung Nguyen. </div>
               <div>
-                A budding software engineer nestled in the vibrant landscapes of
+                A budding software engineer nested in the vibrant landscapes of
                 California, USA.
               </div>
             </div>
@@ -188,8 +188,8 @@ export default function About() {
               fontWeight: "100",
             }}
           >
-          <div>
-    With a Bachelor's degree in Computer Science from San Francisco State University, I have transitioned from academia to hands-on experience in web development. My deep dive into backend technologies and cloud platforms has allowed me to craft seamless user experiences using modern tools like Next.js, Express, and Node.js.
+<div>
+    With a Bachelor&apos;s degree in Computer Science from San Francisco State University, I have transitioned from academia to hands-on experience in web development. My deep dive into backend technologies and cloud platforms has allowed me to craft seamless user experiences using modern tools like Next.js, Express, and Node.js.
 </div>
 
 <div>
@@ -197,12 +197,13 @@ export default function About() {
 </div>
 
 <div>
-    Currently pursuing an Associate's degree in Business Administration at the College of San Mateo, I am expanding my knowledge in the business domain to complement my technical background. This unique combination of skills positions me to contribute effectively to forward-thinking teams, bridging the gap between technology and business.
+    Currently pursuing an Associate&apos;s degree in Business Administration at the College of San Mateo, I am expanding my knowledge in the business domain to complement my technical background. This unique combination of skills positions me to contribute effectively to forward-thinking teams, bridging the gap between technology and business.
 </div>
 
 <div>
-    I am eager to apply my diverse skill set in a role that aligns with my passion for creating transformative digital solutions. Please don't hesitate to reach out if you're looking for someone dedicated to driving positive global change through innovative technology.
+    I am eager to apply my diverse skill set in a role that aligns with my passion for creating transformative digital solutions. Please don&apos;t hesitate to reach out if you&apos;re looking for someone dedicated to driving positive global change through innovative technology.
 </div>
+
 
           </div>
         </div>
