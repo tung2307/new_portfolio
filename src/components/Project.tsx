@@ -3,11 +3,11 @@ import ListProject from "./ListProject";
 export default function Project() {
   const projects = [
     {
-      name: "Skillspoke",
+      name: "Wildwes",
       description:
-        "Skillspoke is a global platform connecting customers with service providers, from plumbers to tutors. Targeting the rapidly advancing Vietnamese tech market, the company aims to meet the growing demand for efficient and cost-effective service solutions.",
-      link: "https://skillspokev2.vercel.app/",
-      stack: ["NextJs", "Prisma", "tRPC", "NodeJs", "ExpressJS"],
+        "Wild Wes Saltwater Sportfishing offers unforgettable fishing experiences, led by Captain Wes and his skilled crew. Operating out of the Bay Area, the company provides guided trips for enthusiasts looking to catch salmon, halibut, and more, while fostering a passion for sustainable sportfishing.",
+      link: "https://wildwes.vercel.app/",
+      stack: ["NextJs"],
     },
     {
       name: "Classwhisper",
@@ -29,13 +29,6 @@ export default function Project() {
         "SFSU Study Partner enhances learning through collaborative study sessions. Create, schedule, and invite friends to your personalized study room.",
       link: "https://sfsu-study-partner.vercel.app/",
       stack: ["React", "FireBase"],
-    },
-    {
-      name: "EzRent",
-      description:
-        "EzRent promotes transparency in rentals by allowing tenants to share experiences and rate properties. Landlords can boost their reputation through positive reviews, benefiting both renters and property owners.",
-      link: "http://13.57.15.24:8080/",
-      stack: ["MySQL", "ExpressJs", "NodeJs", "HTML/CSS"],
     },
   ];
 

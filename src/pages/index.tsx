@@ -184,7 +184,8 @@ export default function Home() {
                     .
                   </p>
                   <p className="text-xl md:text-3xl">
-                    A Web Developer. Currently based in San Mateo, California
+                    A Web Developer with a Computer Science degree and currently
+                    pursuing Business Administration in San Mateo, California.
                   </p>
                   <div className="pt-10">
                     <div className="relative h-10 w-20 cursor-pointer after:absolute after:inset-x-0 after:bottom-0 after:h-1 after:bg-black after:transition-all after:duration-500 after:ease-in-out hover:after:h-[15px] md:h-12 md:w-24">

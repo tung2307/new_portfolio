@@ -10,19 +10,22 @@ export default function About() {
           ABOUT ME
         </h1>
         <p className="w-full text-2xl font-bold md:w-[70vw] md:text-4xl">
-          A recent Computer Science graduate from SFSU,
+          A Computer Science graduate from SFSU (2023),
         </p>
         <p className="w-full text-2xl font-bold md:w-[70vw] md:text-4xl">
-          Currently residing in San Mateo, CA.
+          currently pursuing a Business Administration degree and residing in
+          San Mateo, CA.
         </p>
         <div className="flex w-full flex-col gap-8 text-lg md:w-[50vw]">
           <p>
-            Passionate about creating user-centric digital solutions, I am eager
-            to contribute my skills in a dynamic environment.
+            Passionate about combining technical skills with business strategy,
+            I am eager to contribute innovative solutions in a dynamic
+            environment.
           </p>
           <p>
-            Self-projects allows me to explore innovative technologies, paving
-            the way for seamless and enriching user experiences.
+            Self-driven projects allow me to explore the intersection of
+            technology and business, paving the way for seamless and enriching
+            user experiences.
           </p>
         </div>
         <div
